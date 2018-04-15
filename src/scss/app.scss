@@ -27,6 +27,15 @@
       padding-right: 2em;
     }
   }
+
+  .social-networks span {
+    padding: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }
 // Organize later
 .player {
