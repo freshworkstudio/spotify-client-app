@@ -4,5 +4,6 @@
 /public/js
 /public/images
 /public/fonts
+/public/mix-manifest.json
 .env
 node_modules

@@ -11,7 +11,11 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('src/js/app.js', 'public/js/').sass('src/scss/app.scss', 'public/css/').browserSync('https://spotify-client.dev');
+mix
+  .setPublicPath('public/')
+  .js('src/js/app.js', 'js/')
+  .sass('src/scss/app.scss', 'css/')
+  .browserSync('https://spotify-client.dev');
 
 // Full API
 // mix.js(src, output);
