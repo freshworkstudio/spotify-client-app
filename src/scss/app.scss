@@ -15,33 +15,4 @@
 @import 'general';
 @import "results_component";
 @import 'searchbox';
-
-.track-page {
-  h1 {
-    font-family: $font-family-secondary;
-  }
-
-  .track-detail {
-    display: flex;
-    .image {
-      padding-right: 2em;
-    }
-  }
-
-  .social-networks span {
-    padding: 5px;
-    font-size: 1.1em;
-    cursor: pointer;
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-}
-// Organize later
-.player {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
-}
+@import 'track-page';

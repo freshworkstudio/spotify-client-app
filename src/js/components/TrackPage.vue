@@ -53,46 +53,44 @@
                         </li>
                     </ul>
                 </div>
-                <div class="search-box-container">
-                    <div class="shortcuts">
-                        <ul>
-                            <li>
-                                <a href="#" @click.prevent="goBack"><i class="fa fa-arrow-left"></i> Volver</a>
-                            </li>
-                            <li>
-                                <a target="_blank" :href="track.external_urls.spotify">Abrir en Spotify</a>
-                            </li>
-                            <li class="social-networks">
-                                <social-sharing :url="link"
-                                                title="The Progressive JavaScript Framework"
-                                                description="Intuitive, Fast and Composable MVVM for building interactive interfaces."
-                                                quote="Vue is a progressive framework for building user interfaces."
-                                                hashtags="vuejs,javascript,framework"
-                                                twitter-user="vuejs"
-                                                inline-template>
-                                    <div>
-                                        <network network="facebook">
-                                            <i class="fa fa-facebook"></i>
-                                        </network>
-                                        <network network="googleplus">
-                                            <i class="fa fa-google-plus"></i>
-                                        </network>
-                                        <network network="sms">
-                                            <i class="fa fa-commenting-o"></i>
-                                        </network>
-                                        <network network="telegram">
-                                            <i class="fa fa-telegram"></i>
-                                        </network>
-                                        <network network="twitter">
-                                            <i class="fa fa-twitter"></i>
-                                        </network>
-                                        <network network="whatsapp">
-                                            <i class="fa fa-whatsapp"></i>
-                                        </network>
-                                    </div>
-                                </social-sharing>
-                            </li>
-                        </ul>
+                <div class="links">
+                    <ul>
+                        <li>
+                            <a href="#" @click.prevent="goBack"><i class="fa fa-arrow-left"></i> Volver</a>
+                        </li>
+                        <li>
+                            <a target="_blank" :href="track.external_urls.spotify">Abrir en Spotify</a>
+                        </li>
+                    </ul>
+                    <div class="social-networks">
+                        <social-sharing :url="link"
+                                        title="The Progressive JavaScript Framework"
+                                        description="Intuitive, Fast and Composable MVVM for building interactive interfaces."
+                                        quote="Vue is a progressive framework for building user interfaces."
+                                        hashtags="vuejs,javascript,framework"
+                                        twitter-user="vuejs"
+                                        inline-template>
+                            <div>
+                                <network network="facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </network>
+                                <network network="googleplus">
+                                    <i class="fa fa-google-plus"></i>
+                                </network>
+                                <network network="sms">
+                                    <i class="fa fa-commenting-o"></i>
+                                </network>
+                                <network network="telegram">
+                                    <i class="fa fa-telegram"></i>
+                                </network>
+                                <network network="twitter">
+                                    <i class="fa fa-twitter"></i>
+                                </network>
+                                <network network="whatsapp">
+                                    <i class="fa fa-whatsapp"></i>
+                                </network>
+                            </div>
+                        </social-sharing>
                     </div>
                 </div>
             </div>
