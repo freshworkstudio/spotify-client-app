@@ -46,21 +46,6 @@
       ul {
         margin-top: -5px;
       }
-      li {
-        color: #999;
-        display: inline-block;
-        &::after {
-          content: ', ';
-          padding-right: 5px;
-        }
-        &:last-child::after {
-          content: '';
-        }
-      }
-      a {
-        color: #999;
-        font-size: 0.8em;
-      }
     }
     .result-item-duration {
       width: 4em;
@@ -96,5 +81,27 @@
       }
     }
 
+  }
+}
+
+.artists {
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    color: #999;
+    display: inline-block;
+    &::after {
+      content: ', ';
+      padding-right: 5px;
+    }
+    &:last-child::after {
+      content: '';
+    }
+  }
+  a {
+    color: #999;
+    font-size: 0.8em;
   }
 }

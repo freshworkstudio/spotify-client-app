@@ -1,5 +1,6 @@
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,600");
 
 // Variables
 @import "variables";
@@ -10,69 +11,28 @@
 // Font Awesome
 @import '~font-awesome/css/font-awesome.min.css';
 
+// App styles
+@import 'general';
 @import "results_component";
+@import 'searchbox';
 
-// Organize later
-body {
-  background: #fff;
-  min-height: 100vh;
-}
-
-header {
-  color: #333;
-  position: fixed;
-
+.track-page {
   h1 {
-    padding: 10px;
-    font-size: 18px;
-    text-transform: uppercase;
+    font-family: $font-family-secondary;
   }
-}
 
-.app {
-  min-height: 100vh;
-}
-
-
-.search-box-container {
-  height: 10vh;
-  min-height: 100px;
-  ul, li {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  ul {
-    padding-top: 10px;
-    font-size: 0.8em;
-  }
-  li {
-    display: inline-block;
-    border-right: solid 1px #ccc;
-    padding: 0 5px;
-
-    &:last-child {
-      border: none;
+  .track-detail {
+    display: flex;
+    .image {
+      padding-right: 2em;
     }
   }
-  a {
-    color: #999;
-    text-transform: uppercase;
-  }
-  .search-box {
-    border-bottom: solid 2px #ccc;
-  }
-  input[type=text] {
-    padding: 10px;
-    background: #fff;
-    border: none;
-    outline: none;
-
-    color: #333;
-    font-size: 25px;
-    width: 300px;
-    max-width: 90%;
-  }
-
-
+}
+// Organize later
+.player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
 }

@@ -1,0 +1,19 @@
+body {
+  background: #fff;
+  min-height: 100vh;
+}
+
+header {
+  color: #333;
+  position: fixed;
+
+  h1 {
+    padding: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+}
+
+.app {
+  min-height: 100vh;
+}
