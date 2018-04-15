@@ -17,27 +17,35 @@
     },
     methods: {
       search() {
+        if (this.searchText.length ===0) {
+          this.resetSearch();
+          return;
+        }
+        if (this.searchText.length < 3) {
+          swal('','Tu búsqueda debe tener al menos tres caracteres.');
+          return;
+        }
+
         if (this.busy) return;
         this.busy = true;
         this.searched = true;
-        if (this.searchText.length >= 3) {
-          API.search(this.searchText)
-          .then( response => {
-            this.shared.results = response.data;
-          })
-          .catch(error => {
-            if (error.response.status === 422) {
-              swal('', 'Error de validación. ', 'error');
-              return;
-            }
 
-            swal('', 'Ocurrió un error inesperado. Por favor intenta más tarde.', 'error');
-          })
-          .then(() => {
-            this.busy = false;
-          });
-
+        API.search(this.searchText)
+        .then( response => {
+        this.shared.results = response.data;
+        })
+        .catch(error => {
+        if (error.response.status === 422) {
+          swal('', 'Error de validación. ', 'error');
+          return;
         }
+
+        swal('', 'Ocurrió un error inesperado. Por favor intenta más tarde.', 'error');
+        })
+        .then(() => {
+        this.busy = false;
+      });
+
       },
       searchMostPopular() {
         this.searchText = 'most_popular';
@@ -55,7 +63,7 @@
     <div>
         <div class="app flex-column d-flex justify-content-center align-items-center">
             <div class="search-box-container">
-                <search-box :busy="busy" v-model="searchText" @keydown.enter="search"></search-box>
+                <search-box :busy="busy" @doSearch="search" v-model="searchText" @keydown.enter="search"></search-box>
                 <div v-if="!busy && shared.results.length === 0 && searched" class="errors">No se han encontrado resultados</div>
                 <div class="shortcuts">
                     <ul>

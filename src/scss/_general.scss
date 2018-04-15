@@ -5,7 +5,7 @@ body {
 
 header {
   color: #333;
-  position: fixed;
+  width: 100%;
 
   h1 {
     padding: 10px;
@@ -15,5 +15,5 @@ header {
 }
 
 .app {
-  min-height: 100vh;
+  min-height: 90vh;
 }

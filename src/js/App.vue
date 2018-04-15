@@ -4,8 +4,8 @@
 <template>
     <div>
 
-        <header>
-            <!--<h1>Spotify Client</h1>-->
+        <header class="text-center">
+            <h1>eClass | Spotify Client</h1>
         </header>
         <router-view></router-view>
         <footer>
