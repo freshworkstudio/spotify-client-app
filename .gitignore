@@ -1,0 +1,8 @@
+.DS_Store
+.idea
+/public/css
+/public/js
+/public/images
+/public/fonts
+.env
+node_modules
