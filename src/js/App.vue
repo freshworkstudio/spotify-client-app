@@ -2,7 +2,7 @@
 
 </script>
 <template>
-    <div>
+    <div class="main-wrapper">
 
         <header class="text-center">
             <h1>eClass | Spotify Client</h1>

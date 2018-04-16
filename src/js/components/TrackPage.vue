@@ -94,10 +94,8 @@
                     </div>
                 </div>
             </div>
-            <iframe class="player" :src="'https://open.spotify.com/embed?uri=spotify:track:' + track.id"
-                    frameborder="0" allow="encrypted-media" allowtransparency="true"></iframe>
-
-
         </div>
+        <iframe class="player" :src="'https://open.spotify.com/embed?uri=spotify:track:' + track.id"
+                frameborder="0" allow="encrypted-media" allowtransparency="true"></iframe>
     </div>
 </template>
