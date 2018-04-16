@@ -32,15 +32,16 @@
 
         API.search(this.searchText)
         .then( response => {
-        this.shared.results = response.data;
+            this.shared.results = response.data;
         })
-        .catch(error => {
-        if (error.response.status === 422) {
-          swal('', 'Error de validación. ', 'error');
-          return;
-        }
+        .catch((error) => {
+            alert('error');
+            if (error.response.status === 422) {
+              swal('', 'Error de validación. ', 'error');
+              return;
+            }
 
-        swal('', 'Ocurrió un error inesperado. Por favor intenta más tarde.', 'error');
+            swal('', 'Ocurrió un error inesperado. Por favor intenta más tarde.', 'error');
         })
         .then(() => {
         this.busy = false;
