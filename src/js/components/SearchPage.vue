@@ -61,24 +61,22 @@
   }
 </script>
 <template>
-    <div>
-        <div class="app flex-column d-flex justify-content-center align-items-center">
-            <div class="search-box-container">
-                <search-box :busy="busy" @doSearch="search" v-model="searchText" @keydown.enter="search"></search-box>
-                <div v-if="!busy && shared.results.length === 0 && searched" class="errors">No se han encontrado resultados</div>
-                <div class="shortcuts">
-                    <ul>
-                        <li>
-                            <a href="#" @click.prevent="searchMostPopular">Más populares en Chile</a>
-                        </li>
-                        <li v-if="searched">
-                            <a href="#" @click.prevent="resetSearch">Borrar búsqueda</a>
-                        </li>
-                    </ul>
+    <div class="app flex-column d-flex justify-content-center align-items-center">
+        <div class="search-box-container">
+            <search-box :busy="busy" @doSearch="search" v-model="searchText" @keydown.enter="search"></search-box>
+            <div v-if="!busy && shared.results.length === 0 && searched" class="errors">No se han encontrado resultados</div>
+            <div class="shortcuts">
+                <ul>
+                    <li>
+                        <a href="#" @click.prevent="searchMostPopular">Más populares en Chile</a>
+                    </li>
+                    <li v-if="searched">
+                        <a href="#" @click.prevent="resetSearch">Borrar búsqueda</a>
+                    </li>
+                </ul>
 
-                </div>
             </div>
-            <results-list :busy="busy" :results="shared.results" :class="{'with-results': shared.results.length }"></results-list>
         </div>
+        <results-list :busy="busy" :results="shared.results" :class="{'with-results': shared.results.length }"></results-list>
     </div>
 </template>
